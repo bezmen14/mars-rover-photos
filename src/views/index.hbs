@@ -1,3 +1,7 @@
-<p>Photo by Curiosity's:</p>
 
-<img src="" alt="">
+{{#each rovers}}
+<div class="but">
+
+  <a href="/rovers/{{this.id}}"><button type="button" class="btn btn-outline-info my-2 my-sm-0">{{this.title}}</button></a>
+</div>
+{{/each}}

@@ -1,0 +1,20 @@
+<div id="container" data-container class="d-flex flex-column align-items-center">
+
+  <form method="POST" action="/rovers/{{rover.id}}" name="findphoto">
+    <div class="mb-3">
+      <select name="camera" class="form-select" id="camera" aria-label="Default select example">
+        <option>Выберите камеру марсохода</option>
+        {{#each cameras}}
+        <option data-id="{{this.id}}" class="category" value="{{this.title}}">{{this.title}}</option>
+        {{/each}}
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <input type="date" name="date" id="date" class="form-control" id="exampleInputEmail1"
+        aria-describedby="emailHelp">
+    </div>
+    <button type="submit" class="btn btn-primary">Найти фото</button>
+  </form>
+
+</div>

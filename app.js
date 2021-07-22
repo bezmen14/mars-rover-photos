@@ -4,6 +4,8 @@ const cors = require('cors');
 const hbs = require('hbs');
 const morgan = require('morgan');
 const path = require('path');
+const indexRouter = require('./src/routes/index.router');
+const roversRouter = require('./src/routes/rovers.router');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -19,9 +21,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(process.env.PWD, 'public')));
 
-app.get('/', (req, res) => {
-  res.render('index');
-});
+app.use('/', indexRouter);
+app.use('/rovers', roversRouter);
 
 app.listen(PORT, () => {
   console.log('Server has been started on PORT', PORT);
