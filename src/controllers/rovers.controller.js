@@ -1,8 +1,6 @@
 const fetch = require('node-fetch');
 const db = require('../db/models');
 
-// запрос по дате
-
 const formRender = async (req, res) => {
   const { id } = req.params;
   const currentRover = await db.Rover.findOne({
@@ -29,7 +27,7 @@ const photosByRover = async (req, res) => {
   const response = await fetch(urlApi);
   if (response.status === 200) {
     const allPhotos = await response.json();
-    return res.render('rovers', { photos: allPhotos.photos });
+    return res.render('photos', { photos: allPhotos.photos });
   }
   return res.sendStatus(500);
 };

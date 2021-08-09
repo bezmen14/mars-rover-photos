@@ -1,0 +1,18 @@
+
+.background {
+  background-image: url('/img/pexels-faik-akmd-1025469.jpg');
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+#button {
+display: flex;
+margin-top: 250px;
+}
+
+.info {
+  color:whitesmoke;
+}

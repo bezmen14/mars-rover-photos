@@ -1,0 +1,32 @@
+<div id="container" data-container class="d-flex flex-column align-items-center">
+
+  {{#if photos.length}}
+
+  {{#each photos}}
+  <div data-id="{{this.id}}" class="card my-4" style="width: 32rem;">
+    <img src="{{this.img_src}}" class="card-img-top">
+    <div class="card-body">
+      <p class="card-text">Earth date: {{this.earth_date}}</p>
+      <a href="http://www.iki.rssi.ru/hend/Dictionary/Sol.htm" class="link-dark">
+        <p class="card-text">Sol: {{this.sol}}</p>
+      </a>
+      <p class="card-text">Rover: {{this.rover.name}}</p>
+      <p class="card-text">Camera: {{this.camera.full_name}}</p>
+      <p class="card-text">Launch date: {{this.rover.launch_date}}</p>
+      <p class="card-text">Landing date: {{this.rover.landing_date}}</p>
+      <p class="card-text">Status: {{this.rover.status}}</p>
+    </div>
+  </div>
+  
+  {{/each}}
+
+  {{else}}
+
+  <div class="info">
+
+    <h3>Фото за эту дату нет</h3>
+  </div>
+
+  {{/if}}
+
+</div>

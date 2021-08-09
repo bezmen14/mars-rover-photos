@@ -1,7 +1,8 @@
-
-{{#each rovers}}
-<div class="but">
-
-  <a href="/rovers/{{this.id}}"><button type="button" class="btn btn-outline-info my-2 my-sm-0">{{this.title}}</button></a>
+<div class="d-flex justify-content-around">
+  {{#each rovers}}
+  <div id="button">
+    <a href="/rovers/{{this.id}}"><button type="button"
+        class="btn btn-outline-info my-2 my-sm-0">{{this.title}}</button></a>
+  </div>
+  {{/each}}
 </div>
-{{/each}}
