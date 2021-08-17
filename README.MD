@@ -1,4 +1,4 @@
-# Event-worldwide
+# Mars rover photos
 
 Приложение, для просмотра фотографий с марсоходов.
 
